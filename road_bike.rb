@@ -18,10 +18,11 @@ class RoadBike
   end
 
   def panniers_price
-    total price = 0
+    total_price = 0
 
     panniers.each do |pannier|
       total_price += pannier.price
+    end
 
     return total_price
   end
