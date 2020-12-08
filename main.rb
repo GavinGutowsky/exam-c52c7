@@ -12,7 +12,7 @@ bikes = [
 total_price = 0
 
 bikes.each do |bike|
-  total price += bike.weekly_rental_price
+  total_price += bike.weekly_rental_price
 end
 
 puts "Total price: #{total_price}"
