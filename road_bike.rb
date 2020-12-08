@@ -18,7 +18,12 @@ class RoadBike
   end
 
   def panniers_price
-    panniers[0].price + panniers[1].price
+    total price = 0
+
+    panniers.each do |pannier|
+      total_price += pannier.price
+
+    return total_price
   end
 
   def clean
