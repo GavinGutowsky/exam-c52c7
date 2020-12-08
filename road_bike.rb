@@ -10,7 +10,15 @@ class RoadBike
   end
 
   def weekly_rental_price
-    return daily_price * 7 + panniers[0].price + panniers[1].price
+    return weekly_price + panniers_price
+  end
+
+  def weekly_price
+    daily_price * 7
+  end
+
+  def panniers_price
+    panniers[0].price + panniers[1].price
   end
 
   def clean
