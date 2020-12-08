@@ -2,7 +2,7 @@ require_relative 'roll_pack'
 
 class MountainBike
 
-  attr_accessor :weekly_price, :daily_price, :hourly_price
+  attr_accessor :rollpack, :weekly_price, :daily_price, :hourly_price
 
   def initialize
     @rollpack = RollPack.new
@@ -12,7 +12,7 @@ class MountainBike
   end
 
   def weekly_rental_price
-    @weekly_price + @rollpack.price
+    weekly_price + rollpack.price
   end
 
   def clean
