@@ -3,10 +3,14 @@ require_relative 'roll_pack'
 class MountainBike
 
   def initialize
-    @luggage = RollPack.new
+    @rollpack = RollPack.new
     @weekly_rate = 90
     @daily_rate = 25
     @hourly_rate = 10
+  end
+
+  def week_rental_price
+    @weekly_rate + @rollpack.price
   end
 
   def clean
@@ -17,8 +21,8 @@ class MountainBike
     puts "Adjusting suspension..."
   end
 
-  def luggage
-    @luggage
+  def rollpack
+    @rollpack
   end
 
   def weekly_rate

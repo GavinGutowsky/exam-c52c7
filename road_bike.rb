@@ -7,6 +7,10 @@ class RoadBike
     @daily_rate = 15
   end
 
+  def week_rental_price
+    return daily_rate * 7 + panniers[0].price + panniers[1].price
+  end
+
   def clean
     puts "Cleaning..."
   end
